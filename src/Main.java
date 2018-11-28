@@ -25,4 +25,13 @@ public class Main {
         System.out.println("Second Maximum Number : " + a.get(1));
         System.out.println("Third Maximum Number : " + a.get(2));
     }
+
+    public static void getaverage(ArrayList<Integer> a){
+        double average=0;
+        for(int i=0;i<a.size();i++){
+            average+=a.get(i);
+        }
+        average=average/a.size();
+        System.out.println("the average is:" + average);
+    }
 }
