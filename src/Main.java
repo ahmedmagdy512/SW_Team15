@@ -25,4 +25,13 @@ public class Main {
         System.out.println("Second Maximum Number : " + a.get(1));
         System.out.println("Third Maximum Number : " + a.get(2));
     }
+    
+    public static ArrayList<Integer> zeroIfLessThanZero(ArrayList<Integer> a){
+    	for(int x=0; x<a.size(); x++) {
+    		if(a.get(x) < 0) {
+    			a.set(x, 0);
+    		}
+    	}
+    	return a;
+    }
 }
