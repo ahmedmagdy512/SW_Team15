@@ -5,18 +5,6 @@ import java.util.Scanner;
 public class Main 
 {
 	static ArrayList<Integer>arr;
-	public static void main(String []args)
-	{
-		int x=FindSmallestPrime();
-		if(x==-1)
-		{
-			System.out.println("No prime numbers found");
-		}
-		else
-		{
-			System.out.println(x);
-		}
-	}
 	
 	static void Get_arr()
 	{
