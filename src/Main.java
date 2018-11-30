@@ -33,6 +33,7 @@ public class Main {
                     "18 - All\n" +
                     "19 - Exit"
             );
+            
             System.out.print("Please Enter The Number of Operation to start: ");
             try{
                 answer = sc.nextInt();
