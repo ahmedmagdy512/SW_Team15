@@ -30,6 +30,27 @@ public class Main {
 
 
     }
+    public static void shift(ArrayList <Character> arr)
+	   {
+		  char a1;
+		  char [] tat=new char[arr.size()] ;
+		   
+		   for(int i=0,j=arr.size()-1;j>0;j--)
+		   {
+			   a1=arr.get(i);
+			 
+			   tat[arr.size()-1]=a1;
+			  tat[j-1]=arr.get(j);
+			   
+				   tat[arr.size()-1]=a1;
+			   
+			   
+		   }
+		   for(int i=0;i<arr.size();i++)
+		   {
+			   System.out.println(tat[i]);
+		   }
+	   }
 
     public static void max3(ArrayList<Integer> a){
         Collections.sort(a); // sorted in ascending order
