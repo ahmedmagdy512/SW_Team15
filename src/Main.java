@@ -1,41 +1,59 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Main {
-
-    public static void Sort(int arr[]) 
+public class Main 
+{
+	static ArrayList<Integer>arr;
+	public static void main(String []args)
+	{
+		int x=FindSmallestPrime();
+		if(x==-1)
+		{
+			System.out.println("No prime numbers found");
+		}
+		else
+		{
+			System.out.println(x);
+		}
+	}
+	
+	static void Get_arr()
+	{
+		arr=new ArrayList<Integer>();
+		int sz;
+		System.out.print("Enter the size of the array : ");
+		Scanner sc=new Scanner(System.in);
+		sz=sc.nextInt();
+		System.out.print("Enter the array : ");
+		for(int i=0;i<sz;i++)
+		{
+			int x;
+			x=sc.nextInt();
+			arr.add(x);
+		}
+	}
+	static boolean isPrime(int n) 
     { 
-        int n = arr.length; 
-        for (int i = 0 ; i < n-1 ; i++) 
-            for (int j = 0 ; j < n-i-1 ; j++) 
-                if (arr[j] > arr[j+1]) 
-                {  
-                    int temp = arr[j]; 
-                    arr[j] = arr[j+1]; 
-                    arr[j+1] = temp; 
-                } 
+        if (n <= 1) 
+            return false; 
+       
+        for (int i = 2; i < n; i++) 
+            if (n % i == 0) 
+                return false; 
+       
+        return true; 
     } 
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        ArrayList<Integer> a = new ArrayList<Integer>();
-        int n = sc.nextInt();
-
-        for(int i = 0 ; i < n; ++i){
-            int x = sc.nextInt();
-            a.add(x);
-        }
-
-
-    }
-
-    public static void max3(ArrayList<Integer> a){
-        Collections.sort(a); // sorted in ascending order
-        Collections.reverse(a); // now is sorted in descending order
-        System.out.println("First Maximum Number : " + a.get(0));
-        System.out.println("Second Maximum Number : " + a.get(1));
-        System.out.println("Third Maximum Number : " + a.get(2));
-    }
+	static int FindSmallestPrime()
+	{
+		Get_arr();
+		Collections.sort(arr);
+		for(int i=0; i<arr.size();i++)
+		{
+			int x=arr.get(i);
+			if(isPrime(x))
+				return x;
+		}
+		return -1;
+	}
 }
