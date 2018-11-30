@@ -28,10 +28,8 @@ public class Main {
      public static void findMedian(ArrayList<Integer> a)
     {
        System.out.println("to get median of elements ");
-        System.out.println("please  enter number of elements");
-        Scanner s=new Scanner(System.in);
        
-
+      
         Arrays.sort(a);
         double median;
         if (a.length % 2 == 0) {
