@@ -25,29 +25,23 @@ public class Main {
         System.out.println("Second Maximum Number : " + a.get(1));
         System.out.println("Third Maximum Number : " + a.get(2));
     }
-     public static void findMedian()
+     public static void findMedian(ArrayList<Integer> a)
     {
-        System.out.println("to get median of elements ");
+       System.out.println("to get median of elements ");
         System.out.println("please  enter number of elements");
         Scanner s=new Scanner(System.in);
-        int n=s.nextInt();
-        int numArray[]=new int[n];
-        System.out.println("enter elements");
+       
 
-        for(int i=0;i<n;i++){//for reading array
-            numArray[i]=s.nextInt();
-        }
-        Arrays.sort(numArray);
+        Arrays.sort(a);
         double median;
-        if (numArray.length % 2 == 0) {
-            median = ((double) numArray[numArray.length / 2] + (double) numArray[numArray.length / 2 - 1]) / 2;
+        if (a.length % 2 == 0) {
+            median = ((double) a[a.length / 2] + (double) a[a.length / 2 - 1]) / 2;
             System.out.println("the median is "+median);
         }
         else {
-            median = (double) numArray[numArray.length / 2];
+            median = (double) a[a.length / 2];
             System.out.println("the median is "+median);
         }
-
 
 
 
