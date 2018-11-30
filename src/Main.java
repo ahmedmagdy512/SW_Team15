@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
-    static Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         int answer;
@@ -33,7 +33,7 @@ public class Main {
                     "18 - All\n" +
                     "19 - Exit"
             );
-            System.out.println("Please Enter The Number of Operation to start: ");
+            System.out.print("Please Enter The Number of Operation to start: ");
             try{
                 answer = sc.nextInt();
             } catch (Exception e) {
@@ -43,8 +43,8 @@ public class Main {
 
             //Getting User Input
             try{
-                a = new ArrayList<Integer>();
-                System.out.println("Please Enter The Array Length: ");
+                a = new ArrayList<>();
+                System.out.print("Please Enter The Array Length: ");
                 int n = sc.nextInt();
 
                 for(int i = 0 ; i < n; ++i){
@@ -81,6 +81,10 @@ public class Main {
                 case 10:
                     break;
                 case 11:
+                    for (int i : onlyPrimes(a)) {
+                        System.out.print(i + ", ");
+                    }
+                    System.out.println();
                     break;
                 case 12:
                     break;
@@ -97,7 +101,7 @@ public class Main {
                 case 18:
                     System.out.println("3 - the maximum 3 numbers:");
                     acopy = new ArrayList<>(a);
-                    max3(a);
+                    max3(acopy);
                     System.out.println("/***************************************************************************/");
 
 
@@ -106,6 +110,14 @@ public class Main {
                     Sort(acopy);
                     System.out.println("/***************************************************************************/");
 
+
+                    System.out.println("11 - Return only primes:");
+                    acopy = new ArrayList<>(a);
+                    for (int i : onlyPrimes(acopy)) {
+                        System.out.print(i + ", ");
+                    }
+                    System.out.println();
+                    System.out.println("/***************************************************************************/");
                     break;
                 case 19:
                     in = false;
@@ -136,5 +148,23 @@ public class Main {
                     arr.set(j, arr.get(j+1));
                     arr.set(j+1, temp);
                 }
+    }
+
+    private static ArrayList<Integer> onlyPrimes(ArrayList<Integer> arr){
+        boolean prime;
+        ArrayList<Integer> primes = new ArrayList<>();
+        for (int i : arr) {
+            prime = true;
+            for (int j = 2; j <= i / 2; j++) {
+                if(i % j == 0){
+                    prime = false;
+                    break;
+                }
+            }
+            if(prime){
+                primes.add(i);
+            }
+        }
+        return primes;
     }
 }
