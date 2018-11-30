@@ -22,11 +22,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ArrayList<Integer> a = new ArrayList<Integer>();
         int n = sc.nextInt();
-
         for(int i = 0 ; i < n; ++i){
             int x = sc.nextInt();
             a.add(x);
         }
+        
+
 
 
     }
@@ -58,5 +59,13 @@ public class Main {
         }
 
         return menual;
+    }
+    public static void getaverage(ArrayList<Integer> a){
+        double average=0;
+        for(int i=0;i<a.size();i++){
+            average+=a.get(i);
+        }
+        average=average/a.size();
+        System.out.println("the average of the array is:"+ average);
     }
 }
