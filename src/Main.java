@@ -42,7 +42,7 @@ public class Main
         
 
 
-
+       
     }
     public static void shift(ArrayList <Character> arr)
 	   {
@@ -72,8 +72,16 @@ public class Main
         System.out.println("First Maximum Number : " + a.get(0));
         System.out.println("Second Maximum Number : " + a.get(1));
         System.out.println("Third Maximum Number : " + a.get(2));
+    }  
+    public static ArrayList<Integer> zeroIfLessThanZero(ArrayList<Integer> a){
+    	for(int x=0; x<a.size(); x++) {
+    		if(a.get(x) < 0) {
+    			a.set(x, 0);
+    		}
+    	}
+      return a;
     }
-     public static int mostRepeatedValue(ArrayList<Integer> arr) {
+    public static int mostRepeatedValue(ArrayList<Integer> arr) {
         int menual = 0;
         int counter = 0;
         int tmpCount = 0;
@@ -102,5 +110,25 @@ public class Main
         average=average/a.size();
         System.out.println("the average of the array is:"+ average);
     }
+
+
+     public static void findMedian(ArrayList<Integer> a)
+    {
+       
+            System.out.println("to get median of elements ");
+         
+            Collections.sort(a);
+            double median;
+            int x = a.size() / 2;
+            if (a.size() % 2 == 0) {
+                median = ((double) a.get(x) + (double) a.get(x - 1)) / 2;
+                System.out.println("the median is " + median);
+            } else {
+                median = (double) a.get(x);
+                System.out.println("the median is " + median);
+            }
+
+
+     }
 
 }
