@@ -15,7 +15,7 @@ public class Main {
             a.add(x);
         }
 
-        findMedian();
+       
     }
 
     public static void max3(ArrayList<Integer> a){
@@ -27,21 +27,22 @@ public class Main {
     }
      public static void findMedian(ArrayList<Integer> a)
     {
-       System.out.println("to get median of elements ");
        
-      
-        Arrays.sort(a);
-        double median;
-        if (a.length % 2 == 0) {
-            median = ((double) a[a.length / 2] + (double) a[a.length / 2 - 1]) / 2;
-            System.out.println("the median is "+median);
-        }
-        else {
-            median = (double) a[a.length / 2];
-            System.out.println("the median is "+median);
-        }
+            System.out.println("to get median of elements ");
+         
+            Collections.sort(a);
+            double median;
+            int x = a.size() / 2;
+            if (a.size() % 2 == 0) {
+                median = ((double) a.get(x) + (double) a.get(x - 1)) / 2;
+                System.out.println("the median is " + median);
+            } else {
+                median = (double) a.get(x);
+                System.out.println("the median is " + median);
+            }
 
 
+     }
 
-    }
+    
 }
