@@ -27,8 +27,16 @@ public class Main {
     }
      public static void findMedian()
     {
-        int numArray[] = { 1, 3, 4, 2, 7, 5, 8, 6 };
+        System.out.println("to get median of elements ");
+        System.out.println("please  enter number of elements");
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int numArray[]=new int[n];
+        System.out.println("enter elements");
 
+        for(int i=0;i<n;i++){//for reading array
+            numArray[i]=s.nextInt();
+        }
         Arrays.sort(numArray);
         double median;
         if (numArray.length % 2 == 0) {
