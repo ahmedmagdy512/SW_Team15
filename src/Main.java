@@ -4,11 +4,21 @@ import java.util.Scanner;
 
 public class Main 
 {
-	static ArrayList<Integer>arr;
-	
-	static void Get_arr()
+	public static void main(String []args)
 	{
-		arr=new ArrayList<Integer>();
+		int x=FindSmallestPrime();
+		if(x==-1)
+		{
+			System.out.println("No prime numbers found");
+		}
+		else
+		{
+			System.out.println(x);
+		}
+	}
+	
+	public static void Get_arr(ArrayList<Integer>arr)
+	{
 		int sz;
 		System.out.print("Enter the size of the array : ");
 		Scanner sc=new Scanner(System.in);
@@ -21,20 +31,21 @@ public class Main
 			arr.add(x);
 		}
 	}
-	static boolean isPrime(int n) 
+	public static boolean isPrime(int n) 
     { 
         if (n <= 1) 
             return false; 
-       
+       if(n==2) return true;
         for (int i = 2; i < n; i++) 
             if (n % i == 0) 
                 return false; 
        
         return true; 
     } 
-	static int FindSmallestPrime()
+	public static int FindSmallestPrime()
 	{
-		Get_arr();
+		ArrayList<Integer>arr=new ArrayList<Integer>();
+		Get_arr(arr);
 		Collections.sort(arr);
 		for(int i=0; i<arr.size();i++)
 		{
