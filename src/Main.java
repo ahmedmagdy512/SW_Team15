@@ -29,6 +29,105 @@ public class Main
 		}
 		return -1;
 	}
+    public static void main(String[] args) {
+        int answer;
+        ArrayList<Integer> a, acopy;
+        boolean in = true;
+
+        while(in){
+            //Getting User Choice.
+            System.out.println(
+                    "1 - Find smallest prime\n" +
+                    "2 - Reverse Array\n" +
+                    "3 - Get the maximum 3 numbers\n" +
+                    "4 - Most repeated value\n" +
+                    "5 - Count primes\n" +
+                    "6 - Get Average\n" +
+                    "7 - Sort\n" +
+                    "8 - Check palindrome\n" +
+                    "9 - Get median\n" +
+                    "10 - Check Sorted\n" +
+                    "11 - Return only primes\n" +
+                    "12 - Zero if less than zero\n" +
+                    "13 - Find Largest Prime\n" +
+                    "14 - Shuffle\n" +
+                    "15 - Shift Array\n" +
+                    "16 - Distnict Array\n" +
+                    "17 - Get the minimum 3 numbers\n" +
+                    "18 - All\n" +
+                    "19 - Exit"
+            );
+            
+            System.out.print("Please Enter The Number of Operation to start: ");
+            try{
+                answer = sc.nextInt();
+            } catch (Exception e) {
+                System.out.println("Please Enter a Number.");
+                continue;
+            }
+
+            //Getting User Input
+            try{
+                a = new ArrayList<>();
+                System.out.print("Please Enter The Array Length: ");
+                int n = sc.nextInt();
+
+                for(int i = 0 ; i < n; ++i){
+                    int x = sc.nextInt();
+                    a.add(x);
+                }
+            } catch (Exception e) {
+                System.out.println("Please Enter Numbers Only.");
+                continue;
+            }
+
+            //Calling The Functions
+            switch (answer){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    max3(a);
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    Sort(a);
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                case 11:
+                    for (int i : onlyPrimes(a)) {
+                        System.out.print(i + ", ");
+                    }
+                    System.out.println();
+                    break;
+                case 12:
+                    break;
+                case 13:
+                    break;
+                case 14:
+                    break;
+                case 15:
+                    break;
+                case 16:
+                    break;
+                case 17:
+                    break;
+                case 18:
+                    System.out.println("3 - the maximum 3 numbers:");
+                    acopy = new ArrayList<>(a);
+                    max3(acopy);
+                    System.out.println("/***************************************************************************/");
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
