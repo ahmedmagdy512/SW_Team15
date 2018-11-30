@@ -5,20 +5,7 @@ import java.util.Scanner;
 public class Main 
 {
 	
-	public static void Get_arr(ArrayList<Integer>arr)
-	{
-		int sz;
-		System.out.print("Enter the size of the array : ");
-		Scanner sc=new Scanner(System.in);
-		sz=sc.nextInt();
-		System.out.print("Enter the array : ");
-		for(int i=0;i<sz;i++)
-		{
-			int x;
-			x=sc.nextInt();
-			arr.add(x);
-		}
-	}
+	
 	public static boolean isPrime(int n) 
     { 
         if (n <= 1) 
@@ -31,10 +18,8 @@ public class Main
         return true; 
     } 
 
-	public static int FindSmallestPrime()
+	public static int FindSmallestPrime(ArrayList<Integer>arr)
 	{
-		ArrayList<Integer>arr=new ArrayList<Integer>();
-		Get_arr(arr);
 		Collections.sort(arr);
 		for(int i=0; i<arr.size();i++)
 		{
