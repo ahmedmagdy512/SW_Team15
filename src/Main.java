@@ -38,4 +38,25 @@ public class Main {
         System.out.println("Second Maximum Number : " + a.get(1));
         System.out.println("Third Maximum Number : " + a.get(2));
     }
+     public static int mostRepeatedValue(ArrayList<Integer> arr) {
+        int menual = 0;
+        int counter = 0;
+        int tmpCount = 0;
+
+        for (int i = 0; i < arr.size(); i++) {
+            int temp = arr.get(i);
+            counter = 0;
+            for (int j = 0; j < arr.size(); j++) {
+                if (temp == arr.get(j)) {
+                    counter++;
+                   }
+            }
+            if (counter > tmpCount) {
+                menual = temp;
+                tmpCount = counter;
+            }
+        }
+
+        return menual;
+    }
 }
