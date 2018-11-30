@@ -15,7 +15,7 @@ public class Main {
             a.add(x);
         }
 
-
+        findMedian();
     }
 
     public static void max3(ArrayList<Integer> a){
@@ -24,5 +24,24 @@ public class Main {
         System.out.println("First Maximum Number : " + a.get(0));
         System.out.println("Second Maximum Number : " + a.get(1));
         System.out.println("Third Maximum Number : " + a.get(2));
+    }
+     public static void findMedian()
+    {
+        int numArray[] = { 1, 3, 4, 2, 7, 5, 8, 6 };
+
+        Arrays.sort(numArray);
+        double median;
+        if (numArray.length % 2 == 0) {
+            median = ((double) numArray[numArray.length / 2] + (double) numArray[numArray.length / 2 - 1]) / 2;
+            System.out.println("the median is "+median);
+        }
+        else {
+            median = (double) numArray[numArray.length / 2];
+            System.out.println("the median is "+median);
+        }
+
+
+
+
     }
 }
