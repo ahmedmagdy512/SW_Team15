@@ -136,7 +136,7 @@ int ans=-1;
 	for(int i=0;i<arr.length;i++){
 		boolean S_prime=true;
 		for(int j=2;j*j<=arr[i];j++)if(arr[i]%j==0)S_prime=false;
-		if(S_prime=(S_prime&&arr[i]!=1))ans=Math.max(ans,arr[i]);
+		if(S_prime=(S_prime&&arr[i]>1))ans=Math.max(ans,arr[i]);
 	}
 	
 	
