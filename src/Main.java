@@ -29,7 +29,7 @@ public class Main {
         
 
 
-
+       
     }
     public static void shift(ArrayList <Character> arr)
 	   {
@@ -97,4 +97,24 @@ public class Main {
         average=average/a.size();
         System.out.println("the average of the array is:"+ average);
     }
+     public static void findMedian(ArrayList<Integer> a)
+    {
+       
+            System.out.println("to get median of elements ");
+         
+            Collections.sort(a);
+            double median;
+            int x = a.size() / 2;
+            if (a.size() % 2 == 0) {
+                median = ((double) a.get(x) + (double) a.get(x - 1)) / 2;
+                System.out.println("the median is " + median);
+            } else {
+                median = (double) a.get(x);
+                System.out.println("the median is " + median);
+            }
+
+
+     }
+
+    
 }
