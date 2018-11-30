@@ -5,6 +5,20 @@ import java.util.Scanner;
 
 public class Main {
 
+   public static <T> ArrayList<T> ReverseArray (ArrayList<T> array)
+   {
+       ArrayList<T> ReverseArr =new ArrayList<>();
+       for(int i=array.size()-1 ; i>=0 ;i--)
+       {
+           ReverseArr.add(array.get(i));
+       }
+        for(int i=0 ; i<ReverseArr.size() ; i++)
+        {
+            System.out.print(ReverseArr.get(i) + " ");
+        }
+       
+       return ReverseArr;
+   }
     public static void Sort(int arr[]) 
     { 
         int n = arr.length; 
