@@ -181,6 +181,26 @@ public class Main
                 tmpCount = counter;
             }
         }
+	     public static boolean isSorted(int[] a) 
+ {
+	boolean x = true;
+    int i;
+    for(i = 1; i < a.length; i ++)
+    {
+        if (a[i-1] > a[i])
+        {
+          	x = false;
+            break;
+          
+        }
+      
+      	else
+        {
+            continue;   
+        }
+    }
+   return x;
+ }
 
         return menual;
     }
