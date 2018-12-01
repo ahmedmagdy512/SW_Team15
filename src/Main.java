@@ -1,10 +1,12 @@
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Main
+public class test
 {
     private static Scanner sc = new Scanner(System.in);
 
@@ -81,6 +83,7 @@ public class Main
                     Sort(a);
                     break;
                 case 8:
+                	System.out.print(Palindrome());
                     break;
                 case 9:
                     break;
@@ -137,7 +140,15 @@ public class Main
        System.out.println();
        return ReverseArr;
    }
-
+	public static boolean Palindrome()
+	{
+		String shit;
+		shit=new Scanner(System.in).nextLine();
+	    for(int i=0;i<shit.length()/2;i++)
+	        {if( shit.charAt(i) != shit.charAt(shit.length()-1-i) )
+	            {return false;} }
+	    return true;
+	}
     public static void shift(ArrayList <Character> arr) {
         char a1;
         char [] tat=new char[arr.size()] ;
@@ -299,7 +310,7 @@ return ans;
     public static void min3Numbers(ArrayList<Integer>aux){
 
 
-        sort(aux);
+        Sort(aux);
         System.out.println("Sample output: ");
         for(int i=0;i<3;i++)
             System.out.print(aux.get(i)+" ");
@@ -343,4 +354,5 @@ return ans;
     }
     System.out.println();
   }
+
 }
