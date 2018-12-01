@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Main 
+public class Main
 {
     private static Scanner sc = new Scanner(System.in);
 
@@ -73,6 +73,7 @@ public class Main
                 case 5:
                     break;
                 case 6:
+                    getaverage(a);
                     break;
                 case 7:
                     Sort(a);
@@ -106,6 +107,9 @@ public class Main
                     acopy = new ArrayList<>(a);
                     max3(acopy);
                     System.out.println("/***************************************************************************/");
+                    System.out.print("6 - ");
+                    getaverage(a);
+                    System.out.println("/***************************************************************************/");
             }
         }
     }
@@ -126,25 +130,25 @@ public class Main
    }
 
     public static void shift(ArrayList <Character> arr) {
-      char a1;
-      char [] tat=new char[arr.size()] ;
+        char a1;
+        char [] tat=new char[arr.size()] ;
 
-       for(int i=0,j=arr.size()-1;j>0;j--)
-       {
-           a1=arr.get(i);
+        for(int i=0,j=arr.size()-1;j>0;j--)
+        {
+            a1=arr.get(i);
 
-           tat[arr.size()-1]=a1;
-          tat[j-1]=arr.get(j);
+            tat[arr.size()-1]=a1;
+            tat[j-1]=arr.get(j);
 
-               tat[arr.size()-1]=a1;
+            tat[arr.size()-1]=a1;
 
 
-       }
-       for(int i=0;i<arr.size();i++)
-       {
-           System.out.println(tat[i]);
-       }
-   }
+        }
+        for(int i=0;i<arr.size();i++)
+        {
+            System.out.println(tat[i]);
+        }
+    }
 
     public static void max3(ArrayList<Integer> a){
         Collections.sort(a); // sorted in ascending order
@@ -155,12 +159,12 @@ public class Main
     }
 
     public static ArrayList<Integer> zeroIfLessThanZero(ArrayList<Integer> a){
-    	for(int x=0; x<a.size(); x++) {
-    		if(a.get(x) < 0) {
-    			a.set(x, 0);
-    		}
-    	}
-      return a;
+        for(int x=0; x<a.size(); x++) {
+            if(a.get(x) < 0) {
+                a.set(x, 0);
+            }
+        }
+        return a;
     }
 
     public static int mostRepeatedValue(ArrayList<Integer> arr) {
@@ -174,7 +178,7 @@ public class Main
             for (int j = 0; j < arr.size(); j++) {
                 if (temp == arr.get(j)) {
                     counter++;
-                   }
+                }
             }
             if (counter > tmpCount) {
                 menual = temp;
@@ -214,7 +218,7 @@ public class Main
         System.out.println("the average of the array is:"+ average);
     }
 
-     public static void findMedian(ArrayList<Integer> a)
+    public static void findMedian(ArrayList<Integer> a)
     {
         System.out.println("to get median of elements ");
 
