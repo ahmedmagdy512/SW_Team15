@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Main 
 {
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int answer;
+	int answer;
         ArrayList<Integer> a, acopy;
         boolean in = true;
 
@@ -93,6 +95,7 @@ public class Main
                 case 13:
                     break;
                 case 14:
+                    shuffleArray(a);
                     break;
                 case 15:
                     break;
@@ -107,9 +110,9 @@ public class Main
                     System.out.println("/***************************************************************************/");
             }
         }
-    }
 
-    public static void shift(ArrayList <Character> arr) {
+    }
+public static void shift(ArrayList <Character> arr) {
       char a1;
       char [] tat=new char[arr.size()] ;
 
@@ -247,5 +250,23 @@ public class Main
             }
         }
         return primes;
+    }   
+    static void shuffleArray(ArrayList<Integer> ar)
+  {
+    // If running on Java 6 or older, use `new Random()` on RHS here
+    Random rnd = ThreadLocalRandom.current();
+    for (int i = ar.size() - 1; i > 0; i--)
+    {
+      int index = rnd.nextInt(i + 1);
+      // Simple swap
+      int a = ar.get(index);
+      ar.set(index, ar.get(i));
+      ar.set(i, a);
     }
+    for (int i = 0; i < ar.size(); i++)
+    {
+      System.out.print(ar.get(i) + " ");
+    }
+    System.out.println();
+  }
 }
