@@ -95,6 +95,7 @@ public class Main
                 case 12:
                     break;
                 case 13:
+		System.out.println(Largest_prime(a));	    
                     break;
                 case 14:
                     shuffleArray(a);
@@ -248,6 +249,24 @@ public class Main
 
         return true;
     }
+
+     }
+
+
+public static int Largest_prime(ArrayList<Integer>arr){
+int ans=-1;	
+	
+	for(int i=0;i<arr.size();i++){
+		boolean S_prime=true;
+		for(int j=2;j*j<=arr.get(i);j++)if(arr.get(i)%j==0)S_prime=false;
+		if(S_prime=(S_prime&&arr.get(i)>1))ans=Math.max(ans,arr.get(i));
+	}
+	
+	
+	
+return ans;	
+}
+
 
     public static int FindSmallestPrime(ArrayList<Integer>arr)
     {
