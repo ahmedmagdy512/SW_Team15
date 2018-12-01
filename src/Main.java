@@ -93,6 +93,7 @@ public class Main
                     System.out.println();
                     break;
                 case 12:
+		    System.out.println(zeroIfLessThanZero(a).toString());
                     break;
                 case 13:
 		System.out.println(Largest_prime(a));	    
@@ -114,6 +115,9 @@ public class Main
                     System.out.print("6 - ");
                     getaverage(a);
                     System.out.println("/***************************************************************************/");
+		    System.out.print("12 - ");
+		    System.out.println(zeroIfLessThanZero(a));
+		    System.out.println("/***************************************************************************/");
             }
         }
     }
@@ -249,8 +253,6 @@ public class Main
 
         return true;
     }
-
-     }
 
 
 public static int Largest_prime(ArrayList<Integer>arr){
