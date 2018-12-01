@@ -106,6 +106,7 @@ public class Main
                 case 16:
                     break;
                 case 17:
+                    min3Numbers(a);
                     break;
                 case 18:
                     System.out.println("3 - the maximum 3 numbers:");
@@ -294,6 +295,18 @@ return ans;
                     arr.set(j+1, temp);
                 }
     }
+    /*************************getmin3Numbers*******Ayman Gamal******************/
+    public static void min3Numbers(ArrayList<Integer>aux){
+
+
+        sort(aux);
+        System.out.println("Sample output: ");
+        for(int i=0;i<3;i++)
+            System.out.print(aux.get(i)+" ");
+        System.out.println();
+
+    }
+    /*****************************************************************/
 
     private static ArrayList<Integer> onlyPrimes(ArrayList<Integer> arr){
         boolean prime;
