@@ -63,6 +63,7 @@ public class Main
                 case 1:
                     break;
                 case 2:
+				    ReverseArray(a);
                     break;
                 case 3:
                     max3(a);
@@ -108,6 +109,21 @@ public class Main
             }
         }
     }
+	
+	public static <T> ArrayList<T> ReverseArray (ArrayList<T> array)
+   {
+       ArrayList<T> ReverseArr =new ArrayList<>();
+       for(int i=array.size()-1 ; i>=0 ;i--)
+       {
+           ReverseArr.add(array.get(i));
+       }
+        for(int i=0 ; i<ReverseArr.size() ; i++)
+        {
+            System.out.print(ReverseArr.get(i) + " ");
+        }
+       System.out.println();
+       return ReverseArr;
+   }
 
     public static void shift(ArrayList <Character> arr) {
       char a1;
