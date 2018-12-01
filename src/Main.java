@@ -92,6 +92,7 @@ public class Main
                 case 12:
                     break;
                 case 13:
+		System.out.println(Largest_prime(a));	    
                     break;
                 case 14:
                     break;
@@ -245,16 +246,16 @@ public class Main
      }
 
 
-public static int Largest_prime(int arr[]){
+public static int Largest_prime(ArrayList<Integer>arr){
 int ans=-1;	
 	
-	for(int i=0;i<arr.length;i++){
+	for(int i=0;i<arr.size();i++){
 		boolean S_prime=true;
-		for(int j=2;j*j<=arr[i];j++)if(arr[i]%j==0)S_prime=false;
-		if(S_prime=(S_prime&&arr[i]>1))ans=Math.max(ans,arr[i]);
+		for(int j=2;j*j<=arr.get(i);j++)if(arr.get(i)%j==0)S_prime=false;
+		if(S_prime=(S_prime&&arr.get(i)>1))ans=Math.max(ans,arr.get(i));
 	}
 	
-
+	
 	
 return ans;	
 }
