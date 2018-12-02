@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+import java.util.Vector;
 
 public class Main 
 {
@@ -71,6 +72,7 @@ public class Main
                 case 4:
                     break;
                 case 5:
+                	countPrimes(a);
                     break;
                 case 6:
                     break;
@@ -106,6 +108,11 @@ public class Main
                     acopy = new ArrayList<>(a);
                     max3(acopy);
                     System.out.println("/***************************************************************************/");
+                    System.out.println("5 - the number of Primes is :");
+                    acopy = new ArrayList<>(a);
+                    countPrimes(acopy);
+                    System.out.println("/***************************************************************************/");
+
             }
         }
     }
@@ -284,4 +291,32 @@ public class Main
         }
         return primes;
     }
+
+
+public static void countPrimes (ArrayList<Integer> arr)
+{
+	
+	  Scanner input=new Scanner(System.in); // input.hasNext() -> ** to read next line
+	  Integer temp,counter,pCounter=0;
+	  String output="";
+	for(int i=0;i<arr.size();i++)
+	  {
+		  counter=0;
+		  temp=arr.get(i);
+		  if(temp==1)
+		  {	continue;	}
+		  for(int j=temp-1;j>1;j--)
+		  {
+			  if(temp%j==0)
+			  {	counter++;  break;	}
+			  
+			  
+		  }
+		  if(counter==0)
+		  {	pCounter++;	}
+		  
+	  }
+	System.out.println(pCounter);
+	  
+}
 }
