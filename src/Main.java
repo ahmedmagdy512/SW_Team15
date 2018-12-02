@@ -107,6 +107,7 @@ public class test
                 case 15:
                     break;
                 case 16:
+		    DistinctArray(a);
                     break;
                 case 17:
                     min3Numbers(a);
@@ -122,6 +123,9 @@ public class test
 		    System.out.print("12 - ");
 		    System.out.println(zeroIfLessThanZero(a));
 		    System.out.println("/***************************************************************************/");
+		    DistinctArray(a);
+		    System.out.println("/***************************************************************************/");
+	
             }
         }
     }
@@ -354,5 +358,18 @@ return ans;
     }
     System.out.println();
   }
+      public static void DistinctArray(ArrayList<Integer> arr){
+            Vector v  = new Vector();
+            v.addElement(arr.get(0));
+            for(int i = 1 ; i<arr.size() ; i++){
+                if (v.contains(arr.get(i))){
+                    continue;
+                }
+                else {
+                    v.addElement(arr.get(i));
+                }
+            }
+            System.out.println(v);
+        }       	
 
 }
